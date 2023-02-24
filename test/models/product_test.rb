@@ -70,7 +70,6 @@ test "should update product" do
   title: @title,
   } }
   assert_redirected_to product_url(@product)
-end
-      
+end  
 end
 end
