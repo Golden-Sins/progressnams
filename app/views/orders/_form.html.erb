@@ -1,37 +1,47 @@
-<%= form_with(model: order) do |form| %>
+<%= form_with(model: order, class: "contents") do |form| %>
   <% if order.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%=raw t('errors.template.header', count: @order.errors.count, model: t('activerecord.models.order')) %>.</h2> <p><%= t('errors.template.body') %></p>
 
       <ul>
         <% order.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <li><%=raw error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="my-5">
+    <%= form.label :name, t('.name') %>
+    <%= form.text_field :name, class: "input-field" %>
   </div>
 
-  <div>
-    <%= form.label :address, style: "display: block" %>
-    <%= form.text_area :address %>
+  <div class="my-5">
+    <%= form.label :address, t('.address_html') %>
+    <%= form.text_area :address, rows: 4, class: "input-field" %>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+  <div class="my-5">
+    <%= form.label :email, t('.email') %>
+    <%= form.email_field :email, class: "input-field" %>
   </div>
 
-  <div>
-    <%= form.label :pay_type, style: "display: block" %>
-    <%= form.number_field :pay_type %>
-  </div>
+  <div data-controller="payment">
+    <div class="my-5">
+           <%= form.label :pay_type, t('.pay_type')%>
+      <%= form.select :pay_type, Order.pay_types.keys.map {|key| [t(".pay_types.#{key}"), key]}, 
+      { prompt: t('.pay_prompt_html') }, 
+      'data-payment-target' => 'selection',
+      'data-action' => 'payment#showAdditionalFields',
+      class: "input-field", id: :pay_type %>
 
-  <div>
-    <%= form.submit %>
+    </div>
+    <%= render partial: 'check', locals: {form: form} %> 
+    <%= render partial: 'cc', locals: {form: form} %>
+    <%= render partial: 'po', locals: {form: form} %>
+</div>
+
+  <div class="inline">
+   <%= form.submit t('.submit'), class: "rounded-lg py-3 px-5 bg-amber-300 text-black inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
