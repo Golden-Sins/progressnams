@@ -39,7 +39,7 @@
           </dd>
         </dl>
       <% else %>
-        <h3 class="notice bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg m-4">No associated order</h3>
+        <h3 class="notice bg-amber-50 text-black-500 px-3 py-2 font-medium rounded-lg m-4">No associated order</h3>
       <% end %>
       <% if support_request.response.blank? %>
         <%= form_with(model: support_request,

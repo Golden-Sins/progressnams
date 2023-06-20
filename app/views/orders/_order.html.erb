@@ -1,27 +1,27 @@
 <div id="<%= dom_id order %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
+    <strong class="block font-medium mb-1">Vārds:</strong>
     <%= order.name %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Address:</strong>
+    <strong class="block font-medium mb-1">Adrese:</strong>
     <%= order.address %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Email:</strong>
+    <strong class="block font-medium mb-1">E-pasts:</strong>
     <%= order.email %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Pay type:</strong>
+    <strong class="block font-medium mb-1">Maksājuma veids:</strong>
     <%= order.pay_type %>
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this order", order, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this order', edit_order_path(order), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "parādīt", order, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Pārtaisīt', edit_order_path(order), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
   <% end %>
 </div>

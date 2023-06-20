@@ -1,0 +1,77 @@
+lv:
+
+  number:
+    currency:
+      format:
+        unit:      "$US"
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format:    "%n&nbsp;%u"
+
+  activerecord:
+    errors:
+      messages:
+        inclusion: "nav iekļauts sarakstā"
+        blank:     "nevar būt tukšs"
+  errors:
+    template:
+      body:        "Ir problēmas ar šādiem laukiem:"
+      header:
+        one:       "1 kļūda neļāva saglabāt šo %{model}"
+        other:     "%{count} kļūdas neļāva saglabāt šo %{model}"
+
+  layouts:
+    application:
+      title:       "Zeltainā bibliotēka"
+      home:        "Mājas"
+      questions:   "Jautājumi"
+      news:        "Jaunumi"
+      contact:     "kontakti"
+
+  carts:
+    cart:
+      title:       "Iepirkumu grozs"
+      empty:       "Tukšot grozu"
+      checkout:    "Pirkt"
+
+  number:
+    currency:
+      format:
+        unit: "€" 
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format: "%n&nbsp;%u" 
+
+
+  store:
+    index:
+      title_html:  "zelta katalogs"
+    product:
+      add_html:    "Pievienot grozam"
+
+  orders:
+    new:
+      legend:       "Lūdzu, ievadiet savu informāciju"
+    form:
+      name:         "Vārds, Uzvārds"
+      address_html: "Adrese"
+      email:        "E-pasts"
+      pay_type:     "Maksājuma veids"
+      pay_prompt_html: "Atlasiet maksājuma veidu"
+      submit:       "Veikt pasūtījumu"
+      pay_types:
+        "Check":           "Ķeks"
+        "Credit card":     "Krēdīt karte"
+        "Purchase order":  "Pirkšanas pasūtijums"
+    check:
+      routing_number: "# Maršruta Nr."
+      account_number: "# Konta numurs"
+    cc:
+      cc_number: "Numurs"
+      expiration_date: "Derīguma termiņš"
+    po:
+      po_number: "Numurs"
+
+  thanks:          "Paldies par pasūtījumu"

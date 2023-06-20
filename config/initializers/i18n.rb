@@ -1,6 +1,6 @@
-I18n.default_locale = :en
+I18n.default_locale = :lv
 
 LANGUAGES = [
-  ['English',                  'en'],
-  ["Espa&ntilde;ol".html_safe, 'es']
+  ['English', 'en'],
+  ["Latviešu".html_safe, 'lv']
 ]

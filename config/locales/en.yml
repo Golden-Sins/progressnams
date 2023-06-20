@@ -32,7 +32,7 @@ en:
 
   store:
     index:
-      title_html:  "Your Pragmatic Catalog"
+      title_html:  "Goldens bookstore :)"
     product:
       add_html:    "Add to Cart"
 
