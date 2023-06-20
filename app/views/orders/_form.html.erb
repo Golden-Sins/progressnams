@@ -11,9 +11,14 @@
     </div>
   <% end %>
 
-  <div class="my-4">
+  <div class="my-5">
     <%= form.label :name, t('.name') %>
     <%= form.text_field :name, class: "input-field" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :address, t('.address_html') %>
+    <%= form.text_area :address, rows: 4, class: "input-field" %>
   </div>
 
   <div class="my-5">
@@ -37,6 +42,7 @@
 </div>
 
   <div class="inline">
-   <%= form.submit t('.submit'), class: "rounded-lg py-3 px-5 bg-amber-300 text-black inline-block font-medium cursor-pointer" %>
+  
+   <%= form.submit t('.submit'),  class: "rounded-lg py-3 px-5 bg-amber-300 text-black inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>

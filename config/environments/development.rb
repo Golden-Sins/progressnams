@@ -1,15 +1,17 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do 
-  config.action_mailer.smtp_settings = {
-    address:  "smtp.gmail.com",
-    port: 587,
-    domain: "domain.of.sender.net",
-    authentication: "plain", 
-    user_name: "dave", 
-    password: "secret",
+  config.action_mailer.delivery_method = :smtp 
+  config.action_mailer.smtp_settings = {   
+    address: 'smtp.gmail.com',   
+    port: 587,   
+    domain: 'localhost', # Replace with your own domain or use 'localhost' for development   
+    user_name: 'valtersupenieks35@gmail.com',   
+    password: 'naczxbhjdgfsmaul',   
+    authentication: 'plain',   
     enable_starttls_auto: true
-    }
+  }
+
 
   # Settings specified here will take precedence over those in config/application.rb.
 

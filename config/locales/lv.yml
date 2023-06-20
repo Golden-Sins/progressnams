@@ -64,14 +64,14 @@ lv:
       pay_types:
         "Check":           "Ķeks"
         "Credit card":     "Krēdīt karte"
-        "Purchase order":  "Pirkšanas pasūtijums"
+        "Purchase order":  "Pasūtijuma id"
     check:
       routing_number: "# Maršruta Nr."
       account_number: "# Konta numurs"
     cc:
-      cc_number: "Numurs"
+      cc_number: "Id"
       expiration_date: "Derīguma termiņš"
     po:
-      po_number: "Numurs"
+      po_number: "Id"
 
   thanks:          "Paldies par pasūtījumu"
